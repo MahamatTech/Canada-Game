@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CanadaGames.ViewModels.PlacementReporSummary>
+
+@{
+    ViewData["Title"] = "Placement Repor Summary";
+}
+
+<h1>Placement ReporSummary</h1>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Averageplacement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HighestPlacement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lowestplacement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalEvents)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Averageplacement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestPlacement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lowestplacement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalEvents)
+            </td>
+          
+        </tr>
+}
+    </tbody>
+</table>
